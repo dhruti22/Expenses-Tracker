@@ -1,0 +1,34 @@
+﻿@model MVC_Project_1.Models.totalLimit
+@{
+    ViewBag.Title = "EditLimit";
+}
+
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+<h2>EditLimit</h2>
+
+@using (Html.BeginForm("EditLimit", "ExCategory", FormMethod.Post))
+{
+    <div class="container">
+        <div class="form-group">
+            @Html.HiddenFor(h => h.Id)
+            <label>Total Limit</label>
+            @Html.ValidationMessageFor(h => h.Total_Limit, "", new { @class = "error" })
+            @Html.TextBoxFor(h => h.Total_Limit, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </div>
+}
+
+
+
+
+
+

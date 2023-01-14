@@ -1,0 +1,35 @@
+﻿@model List<MVC_Project_1.Models.totalLimit>
+
+@{
+    ViewBag.Title = "ListLimit";
+}
+
+<h2>ListLimit</h2>
+
+@if (TempData["AlertMsg"] != null)
+{
+    <div class="alert alert-success">
+        <strong>Success !</strong>@TempData["AlertMsg"]
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+    </div>
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Total Limit</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>  
+            <td>@item.Total_Limit</td>
+            <td>
+                <a href="@Url.Action("EditLimit",new { item.Id,item.Total_Limit })" class="btn btn-success">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
+
