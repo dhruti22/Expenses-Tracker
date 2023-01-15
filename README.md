@@ -38,7 +38,7 @@
 
 
 
-* Show the Linit
+* Show the Limit
 ![Screenshot (109)](https://user-images.githubusercontent.com/86607648/212488580-26a6cfa2-71c7-4cb1-b9f8-a4d36b7747ca.png)
 
 
